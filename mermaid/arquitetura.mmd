@@ -1,0 +1,21 @@
+graph TD
+  subgraph Frontend
+    A[UI: Angular]
+  end
+
+  subgraph IAM
+    B[Keycloak]
+  end
+
+  subgraph Backend
+    C[API: FastAPI]
+  end
+
+  subgraph Database
+    D[MongoDB]
+  end
+
+  A -->|Autenticação e JWT| B
+  A -->|Requisições REST com token| C
+  C -->|Validação de Token| B
+  C -->|Persistência de Definições| D
