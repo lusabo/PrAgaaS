@@ -1,0 +1,15 @@
+.body-container {
+  /* Compensa a altura do header fixo */
+  margin-top: 64px;
+  /* Ocupa toda a altura da tela menos o header */
+  height: calc(100vh - 64px);
+}
+
+.sidenav-container {
+  height: 100%;
+}
+
+.main-content {
+  padding: 16px;
+  box-sizing: border-box;
+}

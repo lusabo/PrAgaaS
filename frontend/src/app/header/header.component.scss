@@ -1,0 +1,20 @@
+.header-toolbar {
+  display: flex;        /* Usa layout flex no toolbar */
+  align-items: center;  /* Alinha verticalmente no centro */
+  height: 64px;         /* Altura do toolbar */
+  position: fixed;       /* Fixa o header na tela */
+  top: 0;                /* Fica no topo */
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.system-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* Esse spacer empurra o que vem depois para a extremidade direita */
+.spacer {
+  flex: 1 1 auto;
+}

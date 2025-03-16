@@ -1,0 +1,25 @@
+<app-header></app-header>
+
+<div class="body-container">
+    <mat-sidenav-container class="sidenav-container">
+        <mat-sidenav #sidenav mode="side" opened class="sidenav">
+            <mat-nav-list>
+                <a mat-list-item
+                   routerLink="/"
+                   routerLinkActive="active"
+                   [routerLinkActiveOptions]="{ exact: true }"
+                   aria-label="Início">
+                    <mat-icon>home</mat-icon>
+                    <span>Início</span>
+                </a>
+                <a mat-list-item routerLink="/gpt" routerLinkActive="active">GPT</a>
+            </mat-nav-list>
+        </mat-sidenav>
+
+        <mat-sidenav-content>
+            <div class="main-content">
+                <router-outlet></router-outlet>
+            </div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

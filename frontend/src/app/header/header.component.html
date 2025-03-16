@@ -1,0 +1,21 @@
+<mat-toolbar color="primary" class="header-toolbar">
+  <!-- Nome do sistema à esquerda -->
+  <span class="system-name">PrAgaaS</span>
+
+  <!-- Espaçador que empurra o restante do conteúdo para a direita -->
+  <span class="spacer"></span>
+
+  <!-- Botão que abre o menu de usuário -->
+  <button mat-button [matMenuTriggerFor]="userMenu">
+    <mat-icon>account_circle</mat-icon>
+    <span>{{ user.name }}</span>
+  </button>
+
+  <!-- Menu de usuário (exibido ao clicar no botão) -->
+  <mat-menu #userMenu="matMenu">
+    <button mat-menu-item (click)="logout()">
+      <mat-icon>exit_to_app</mat-icon>
+      <span>Logout</span>
+    </button>
+  </mat-menu>
+</mat-toolbar>

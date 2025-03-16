@@ -1,4 +1,5 @@
-import {ApplicationConfig, provideZoneChangeDetection} from '@angular/core';
+import {ApplicationConfig, importProvidersFrom, provideZoneChangeDetection} from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {provideRouter} from '@angular/router';
 import {provideKeycloak} from 'keycloak-angular';
 
@@ -18,6 +19,7 @@ export const appConfig: ApplicationConfig = {
       }
     }),
     provideZoneChangeDetection({eventCoalescing: true}),
-    provideRouter(routes)
+    provideRouter(routes),
+    importProvidersFrom(BrowserAnimationsModule)
   ]
 };
